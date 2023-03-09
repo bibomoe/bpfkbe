@@ -1,0 +1,79 @@
+### Get User Data
+GET http://localhost:5000/apibpfk/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6ImR3aXAiLCJlbWFpbCI6ImtvdGFrZWxla3Ryb25pa0BnbWFpbC5jb20iLCJkYXRhU2F0a2VySWQiOjMxNzQwNjMsImlhdCI6MTY3NzY0NTg5OCwiZXhwIjoxNjc3NzMyMjk4fQ.Ex48UKkh5Ld5LiB_soW3JnI3f1XVnu4OefUVK4Q6Hvw
+
+### Insert New User
+POST http://localhost:5000/apibpfk/users
+Content-Type: application/json
+
+{
+    "nama": "dwip",
+    "email": "kotakelektronik@gmail.com",
+    "password": "12345",
+    "dataSatkerId": "3174063"
+}
+
+### Login
+POST http://localhost:5000/apibpfk/login
+Content-Type: application/json
+
+{
+    "userName": "kotakelektronik@gmail.com",
+    "password": "12345"
+}
+
+### Logut
+DELETE http://localhost:5000/apibpfk/logout
+
+### Get Token
+GET http://localhost:5000/apibpfk/token
+
+### Get Propinsi
+GET http://localhost:5000/apibpfk/propinsi
+
+### Get Kota
+GET http://localhost:5000/apibpfk/kota?propid=31
+
+### Get Kepemilikan
+GET http://localhost:5000/apibpfk/kepemilikan
+
+### Get Jenis User
+GET http://localhost:5000/apibpfk/jenisUser
+
+### Get Institusi
+GET http://localhost:5000/apibpfk/institusi
+
+### Institusi CREATE
+POST http://localhost:5000/apibpfk/institusi
+Content-Type: application/json
+
+{
+    "jenis_user_id": 0,
+    "nama_institusi": "",
+    "propinsi_id": 0,
+    "kota_id": 0,
+    "alamat": "",
+    "kepemilikan_id": 0,
+    "no_telp": 0,
+    "website": "",
+    "media_sosial": "",
+    "nama_pj": "",
+    "nama_pj_lab_kalibrasi": "",
+    "nama_pj_mutu": "",
+    "contact_person": "",
+    "nomor_izin_operasional": "",
+    "tanggal_izin_operasional": "",
+    "email": "",
+    "dokumen_izin_operasional": ""
+}
+
+### Institusi Update 
+PATCH http://localhost:5000/apibpfk/institusi/3
+Content-Type: application/json 
+
+{
+    "jenis_user_id": 7
+}
+
+### Institusi DELETE 
+DELETE http://localhost:5000/apibpfk/institusi/2
